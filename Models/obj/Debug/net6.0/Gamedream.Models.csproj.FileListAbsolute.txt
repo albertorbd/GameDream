@@ -1,0 +1,12 @@
+C:\Users\carme\DOTNET\Gamedream\Models\bin\Debug\net6.0\Gamedream.Models.deps.json
+C:\Users\carme\DOTNET\Gamedream\Models\bin\Debug\net6.0\Gamedream.Models.dll
+C:\Users\carme\DOTNET\Gamedream\Models\bin\Debug\net6.0\Gamedream.Models.pdb
+C:\Users\carme\DOTNET\Gamedream\Models\obj\Debug\net6.0\Gamedream.Models.csproj.AssemblyReference.cache
+C:\Users\carme\DOTNET\Gamedream\Models\obj\Debug\net6.0\Gamedream.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carme\DOTNET\Gamedream\Models\obj\Debug\net6.0\Gamedream.Models.AssemblyInfoInputs.cache
+C:\Users\carme\DOTNET\Gamedream\Models\obj\Debug\net6.0\Gamedream.Models.AssemblyInfo.cs
+C:\Users\carme\DOTNET\Gamedream\Models\obj\Debug\net6.0\Gamedream.Models.csproj.CoreCompileInputs.cache
+C:\Users\carme\DOTNET\Gamedream\Models\obj\Debug\net6.0\Gamedream.Models.dll
+C:\Users\carme\DOTNET\Gamedream\Models\obj\Debug\net6.0\refint\Gamedream.Models.dll
+C:\Users\carme\DOTNET\Gamedream\Models\obj\Debug\net6.0\Gamedream.Models.pdb
+C:\Users\carme\DOTNET\Gamedream\Models\obj\Debug\net6.0\ref\Gamedream.Models.dll
