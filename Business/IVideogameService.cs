@@ -1,0 +1,12 @@
+using Gamedream.Models;
+namespace Gamedream.Business;
+
+public interface IVideogameService
+{
+   void RegisterVideogame(string name, string genre, string description, string developer, string platform, int valoration);
+    void PrintAllVideogames();
+    bool CheckVideogame(string name);
+    Videogame GetVideogame(string name);
+    void DeleteVideogame(string name);
+    void UpdateVideogame(Videogame videogame, string newGenre, string newDescription, string newDeveloper, string newPlatform, int newValoration);
+}
