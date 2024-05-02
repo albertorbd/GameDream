@@ -10,7 +10,6 @@ public class User
     public string? DNI { get; set; }
     public DateTime BirthDate { get; set; }
     public double Money { get; set; }
-    public double Wallet { get; set; }
     public List<Operation> Operations { get; set; }
     public Dictionary<string, double> Videogames { get; set; }
 
@@ -30,7 +29,6 @@ public class User
     DNI = dni;
     BirthDate = birthdate;
     Money= 0.0;
-    Wallet= 0.0;
     Operations= new List<Operation>();
     Videogames= new Dictionary<string, double>();
     }

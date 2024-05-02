@@ -15,10 +15,11 @@ _repository=repository;
 
 }
 
-public void RegisterVideogame(string name, string genre, string description, string developer, string platform, int valoration){
+
+    public void RegisterVideogame(string name, string genre, string description, double price, string developer, string platform, int valoration){
  try
  {
-    Videogame videogame= new(name,genre, description, developer, platform, valoration);
+    Videogame videogame= new(name,genre, description, price, developer, platform, valoration);
     _repository.AddVideogame(videogame);
     _repository.SaveChanges();
  }   
@@ -75,10 +76,17 @@ public void PrintAllVideogames(){
     }
 
     public void DeleteVideogame(string gamename){
+         
         try{
            Videogame getVideogame = GetVideogame(gamename);
+
+           if (getVideogame != null){
            _repository.DeleteVideogame(getVideogame);
            _repository.SaveChanges();
+           Console.WriteLine("El videojuego ha sido borrado correctamente");
+           }else{
+            Console.WriteLine("No se encontró un videojuego con ese nombre");
+           }
         }catch(Exception e ){
             _repository.LogError("Error deleting videogame", e);
             throw new Exception("An error ocurred deleting the videogame", e);
@@ -97,8 +105,30 @@ public void PrintAllVideogames(){
         }catch(Exception e){
             _repository.LogError("Error updating videogame",e);
             throw new Exception("An error has ocurred updating videogame");
-            
+
         }
     }
+     public string InputEmpty()
+    {
+        try
+        {
+            string input;
+            do
+            {
+                input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("El campo está vacío.");
+                }
+            } while (string.IsNullOrWhiteSpace(input));
 
+            return input;
+        }
+        catch (Exception e)
+        {
+            _repository.LogError("Error al comprobar el campo", e);
+            throw new Exception("Ha ocurrido un error al comprobar el campo", e);
+        }
+    }
+    
 }

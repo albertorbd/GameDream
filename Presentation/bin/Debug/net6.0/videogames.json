@@ -1,0 +1,24 @@
+[
+  {
+    "Id": 0,
+    "Name": "Persona 5",
+    "Genre": "ROL",
+    "Description": "Juego por turnos de matar monstruos y subir niveles",
+    "RegisterDate": "2024-05-02T00:29:13.5198719+02:00",
+    "Price": 55,
+    "Developer": "Atlus",
+    "Platform": "PC",
+    "Valoration": 9
+  },
+  {
+    "Id": 1,
+    "Name": "Dragons dogma 2",
+    "Genre": "ROL y Aventuras",
+    "Description": "Juego mundo abierto de RPG para un jugador en el que eres un Arisen, una persona capaz de invocar aliados que te ayudar\u251C\u00EDn a lo largo de tu aventura",
+    "RegisterDate": "2024-05-02T14:09:10.9230362+02:00",
+    "Price": 65,
+    "Developer": "Capcom",
+    "Platform": "PC XBOX SERIES Y PLAYSTATION",
+    "Valoration": 10
+  }
+]

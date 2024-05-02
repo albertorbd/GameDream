@@ -7,14 +7,14 @@ public class VideogameRepository : IVideogameRepository
 private Dictionary<string, Videogame> _videogame = new Dictionary<string, Videogame>();
     private readonly string _filePath = "videogames.json";
         private readonly string _logsfilePath = "logs.json";
-
-
+         
     public VideogameRepository()
     {
         LoadVideogames();
     }
     public void AddVideogame(Videogame videogame)
     {
+         
         _videogame[videogame.Id.ToString()] = videogame;
     }
      
@@ -23,7 +23,16 @@ private Dictionary<string, Videogame> _videogame = new Dictionary<string, Videog
      }
 
      public Videogame GetVideogame(string name){
-        return _videogame.TryGetValue(name, out var videogame) ? videogame : null;
+        var allGames = GetAllVideogames();
+            foreach (var videogames in allGames.Values)
+            {
+                if (videogames.Name.Equals(name, StringComparison.OrdinalIgnoreCase))
+                {
+                    return videogames;
+                }
+            }
+            
+            return null;
      }
      
     public void DeleteVideogame(Videogame videogame){
@@ -43,6 +52,11 @@ private Dictionary<string, Videogame> _videogame = new Dictionary<string, Videog
                 string jsonString = File.ReadAllText(_filePath);
                 var videogames = JsonSerializer.Deserialize<IEnumerable<Videogame>>(jsonString);
                 _videogame = videogames.ToDictionary(videogame => videogame.Id.ToString());
+
+                int highestId = _videogame.Values.Max(v => v.Id);
+
+            
+                 Videogame.VideogameIdSeed = highestId + 1;
             }
             catch (Exception e)
             {
@@ -50,14 +64,6 @@ private Dictionary<string, Videogame> _videogame = new Dictionary<string, Videog
             }
         }
 
-        if (_videogame.Count == 0)
-        {
-            Videogame.VideogameIdSeed= 1;
-        }
-        else
-        {
-            Videogame.VideogameIdSeed = _videogame.Count + 1;
-        }   
     }
     public void SaveChanges()
     {
