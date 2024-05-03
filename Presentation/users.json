@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 0,
+    "Name": "Alberto",
+    "Lastname": "Riveiro",
+    "Email": "albertoriveiro@hotmail.es",
+    "Password": "1234",
+    "DNI": "23456",
+    "BirthDate": "1996-10-02T00:00:00",
+    "Money": 0,
+    "Operations": [],
+    "Videogames": {}
+  },
+  {
+    "Id": 1,
+    "Name": "Carmen",
+    "Lastname": "Del Bano",
+    "Email": "carmen@hotmail.es",
+    "Password": "4321",
+    "DNI": "2545432",
+    "BirthDate": "1970-08-03T00:00:00",
+    "Money": 0,
+    "Operations": [],
+    "Videogames": {}
+  }
+]

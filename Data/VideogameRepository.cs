@@ -57,12 +57,15 @@ private Dictionary<string, Videogame> _videogame = new Dictionary<string, Videog
 
             
                  Videogame.VideogameIdSeed = highestId + 1;
+
+               
             }
             catch (Exception e)
             {
                 LogError("Error searching videogames archive", e);
             }
         }
+         
 
     }
     public void SaveChanges()

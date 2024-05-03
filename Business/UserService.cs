@@ -109,9 +109,49 @@ public void DeleteUser(string userEmail){
         _repository.UpdateUser(userUpdated);
         _repository.SaveChanges();
         }catch(Exception e){
-            _repository.LogError("Error updating videogame",e);
-            throw new Exception("An error has ocurred updating videogame");
+            _repository.LogError("Error updating user",e);
+            throw new Exception("An error has ocurred updating user");
 
         }
     }  
+
+     public string InputEmpty()
+    {
+        try
+        {
+            string input;
+            do
+            {
+                input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("El campo está vacío.");
+                }
+            } while (string.IsNullOrWhiteSpace(input));
+
+            return input;
+        }
+        catch (Exception e)
+        {
+            _repository.LogError("Error al comprobar el campo", e);
+            throw new Exception("Ha ocurrido un error al comprobar el campo", e);
+        }
+    }
+public bool loginCheck(string email, string password){
+try{
+   foreach(var user in _repository.GetAllUsers().Values){
+    if((user.Email.Equals(email, StringComparison.OrdinalIgnoreCase) &&
+     user.Password.Equals(password))){
+        return true;
+     }
+   } 
+   return false;
+}
+catch (Exception e)
+        {
+            _repository.LogError("error checking user", e);
+            throw new Exception("An error has ocurred checking user", e);
+        }
+}
+
 }

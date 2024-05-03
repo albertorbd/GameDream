@@ -130,5 +130,39 @@ public void PrintAllVideogames(){
             throw new Exception("Ha ocurrido un error al comprobar el campo", e);
         }
     }
-    
+
+ public void SearchVideogameByName()
+{
+    string searchQuery;
+    do
+    {
+        Console.WriteLine("Escribe S para salir.");
+        Console.WriteLine("Buscar videojuego por nombre (mayúsculas y minúsculas): ");
+        searchQuery = InputEmpty();
+
+        if (searchQuery.ToLower() == "s")
+        {
+            break;
+        }
+
+        var matchingVideogames = _repository.GetAllVideogames().Values
+            .Where(v => v.Name.ToLower().Contains(searchQuery.ToLower()));
+
+        if (!matchingVideogames.Any())
+        {
+            Console.WriteLine("No se ha encontrado ningún videojuego con ese nombre.\n");
+        }
+        else
+        {
+            Console.WriteLine("Resultados de la búsqueda:\n");
+            foreach (var videogame in matchingVideogames)
+            {
+                Console.WriteLine($"ID: {videogame.Id}, Nombre: {videogame.Name}, Género: {videogame.Genre}, Descripción: {videogame.Description}, Precio: {videogame.Price},Desarrollador: {videogame.Developer}, Plataforma: {videogame.Platform}, Valoración: {videogame.Valoration}, Fecha de Registro: {videogame.RegisterDate}");
+            }
+            Console.WriteLine();
+        }
+    } while (searchQuery.ToLower() != "s");
+}
+
+
 }

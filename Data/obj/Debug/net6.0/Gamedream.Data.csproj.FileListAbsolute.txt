@@ -1,4 +1,4 @@
-C:\Users\carme\DOTNET\Gamedream\Data\bin\Debug\net6.0\Gamedream.Data.deps.json
+c:\Users\carme\DOTNET\Gamedream\Data\bin\Debug\net6.0\Gamedream.Data.deps.json
 C:\Users\carme\DOTNET\Gamedream\Data\bin\Debug\net6.0\Gamedream.Data.dll
 C:\Users\carme\DOTNET\Gamedream\Data\bin\Debug\net6.0\Gamedream.Data.pdb
 C:\Users\carme\DOTNET\Gamedream\Data\bin\Debug\net6.0\Gamedream.Models.dll
@@ -8,8 +8,8 @@ C:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\Gamedream.Data.GeneratedMS
 C:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\Gamedream.Data.AssemblyInfoInputs.cache
 C:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\Gamedream.Data.AssemblyInfo.cs
 C:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\Gamedream.Data.csproj.CoreCompileInputs.cache
-C:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\Gamedream.Data.csproj.CopyComplete
+c:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\Gamedream.Data.csproj.CopyComplete
 C:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\Gamedream.Data.dll
 C:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\refint\Gamedream.Data.dll
 C:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\Gamedream.Data.pdb
-C:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\ref\Gamedream.Data.dll
+c:\Users\carme\DOTNET\Gamedream\Data\obj\Debug\net6.0\ref\Gamedream.Data.dll

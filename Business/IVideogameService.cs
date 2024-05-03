@@ -11,4 +11,5 @@ public interface IVideogameService
     void DeleteVideogame(string name);
     void UpdateVideogame(Videogame videogame, string newGenre, string newDescription, string newDeveloper, string newPlatform, int newValoration);
     string InputEmpty();
+    void SearchVideogameByName();
 }

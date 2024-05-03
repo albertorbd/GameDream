@@ -1,21 +1,12 @@
+﻿using Gamedream.Models;
 using Gamedream.Business;
 using Gamedream.Data;
-namespace Gamedream.Presentation
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-           
-            IVideogameService videogameService = new VideogameService(new VideogameRepository());
-            Menu menu = new Menu(videogameService);
-             menu.CreateVideogame();
-            
-           
-           
-          
-             
-            
-        }
-    }
-}
+using Gamedream.Presentation;
+
+
+IUserRepository userRepository = new UserRepository();
+IVideogameRepository videogameRepository = new VideogameRepository();
+IUserService userService = new UserService(userRepository);
+IVideogameService videogameService = new VideogameService(videogameRepository);
+Menu menu = new(userService, videogameService);
+menu.Registration();

@@ -1,0 +1,24 @@
+[
+  {
+    "Id": 0,
+    "Name": "Dragons dogma 2",
+    "Genre": "Aventura y Rol",
+    "Description": "Eres un Arisen que tiene que recuperar su coraz\u251C\u2502n",
+    "RegisterDate": "2024-05-03T13:18:45.2093585+02:00",
+    "Price": 70,
+    "Developer": "Capcom",
+    "Platform": "PC PS5 Y XBOX",
+    "Valoration": 10
+  },
+  {
+    "Id": 1,
+    "Name": "Persona 5",
+    "Genre": "Rol ",
+    "Description": "Tienes la habilidad de invocar esbirros que te ayudar\u251C\u00EDn a pelear ",
+    "RegisterDate": "2024-05-03T13:28:28.6724282+02:00",
+    "Price": 50,
+    "Developer": "Atlus",
+    "Platform": "XBOX Y PC",
+    "Valoration": 10
+  }
+]

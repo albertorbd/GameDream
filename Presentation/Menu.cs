@@ -5,125 +5,155 @@ using Gamedream.Models;
 
 
 using System;
+using System.ComponentModel.Design;
 
 namespace Gamedream.Presentation
 {
     public class Menu
     {
         private readonly IVideogameService _videogameService;
+        public readonly IUserService _userService;
 
-        public Menu(IVideogameService videogameService)
+        public Menu(IUserService userService, IVideogameService videogameService)
         {
-            _videogameService = videogameService;
+         _userService = userService;
+
+         _videogameService = videogameService;
         }
 
-        public void CreateVideogame()
+        public void Registration()
         {
-            Console.WriteLine("Crear un nuevo videojuego:");
-            Console.Write("Nombre: ");
-            string name = _videogameService.InputEmpty();
-            Console.Write("Género: ");
-            string genre = _videogameService.InputEmpty();
-            Console.Write("Descripción: ");
-            string description = _videogameService.InputEmpty();
-            Console.WriteLine("Precio ");
-            double price;
-            while (!double.TryParse(Console.ReadLine(), out price))
-            {
-                Console.WriteLine("Introduce un valor numérico válido: ");
-            }
-
-            Console.Write("Desarrollador: ");
-            string developer = _videogameService.InputEmpty();
-            Console.Write("Plataforma: ");
-            string platform = _videogameService.InputEmpty();
-            Console.Write("Valoración: ");
-            int valoration;
-            while (!int.TryParse(Console.ReadLine(), out valoration))
-            {
-                Console.WriteLine("Introduce un valor numérico válido: ");
-            }
-
-            try
-            {
-                _videogameService.RegisterVideogame(name, genre, description,price, developer, platform, valoration);
-                Console.WriteLine("Videojuego creado con éxito.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Error al crear el videojuego: {e.Message}");
-            }
+            Console.WriteLine("\n-----------BIENVENIDO A GAMEDREAM-------------\n");
+            Console.WriteLine("1. Regístrate");
+            Console.WriteLine("2. Inicia sesión");
+            Console.WriteLine("3. Admin mode");
+            Console.WriteLine("4. Salir");
+            SelectRegistrationOption(Console.ReadLine()); 
         }
 
-        public void ShowAllVideogames(){
-
-        try{
-         _videogameService.PrintAllVideogames();
-        }catch(Exception e){
-            Console.WriteLine($"Error al mostrar los videojuegos: {e.Message}");
-        }
-        }
-        public void DeleteVideogame()
-        {
-            try
-            {
-                Console.WriteLine("Ingrese el nombre del videojuego que desea eliminar:");
-                string name = _videogameService.InputEmpty();
-
-                _videogameService.DeleteVideogame(name);
-                Console.WriteLine("El videojuego se ha eliminado correctamente.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Error al eliminar el videojuego: {e.Message}");
-            }
-        }
-
-        public void UpdateVideogame()
-{
-    try
+         public void SelectRegistrationOption(string option)
     {
-        Console.WriteLine("Ingrese el nombre del videojuego que desea actualizar:");
-        string videogameName = _videogameService.InputEmpty();
-
-        // Obtener el videojuego por su nombre
-        Videogame videogameToUpdate = _videogameService.GetVideogame(videogameName);
-
-        if (videogameToUpdate != null)
+        switch (option)
         {
-            Console.WriteLine($"Ingrese el nuevo género para {videogameName}:");
-            string newGenre = _videogameService.InputEmpty();
+        case "1":
+            SignUp();
+        break;
+        case "2":
+            Login();
+        break;
+        case "3":
+         goToAdminMode();
+        break;
 
-            Console.WriteLine($"Ingrese la nueva descripción para {videogameName}:");
-            string newDescription = _videogameService.InputEmpty();
+        case "4":
+        Console.WriteLine("Vuelve cuando quieras")  ;
+        break;
+        default:
+            Console.WriteLine("Introduce una opción válida");
+            Registration();
+        break;
+        }
+    }
 
-            Console.WriteLine($"Ingrese el nuevo desarrollador para {videogameName}:");
-            string newDeveloper = _videogameService.InputEmpty();
+    private void SignUp() 
+    {
+        Console.Write("Nombre: ");
+        string name = _userService.InputEmpty();
+         Console.Write("Apellidos: ");
 
-            Console.WriteLine($"Ingrese la nueva plataforma para {videogameName}:");
-            string newPlatform = _videogameService.InputEmpty();
+        string lastname= _userService.InputEmpty();
+        
+      
+        Console.Write("Dirección de correo: ");
+        string email = _userService.InputEmpty();
 
-            Console.WriteLine($"Ingrese la nueva valoración para {videogameName}:");
-            int newValoration = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Contraseña: ");
+        string password = _userService.InputEmpty();
 
-            // Actualizar el videojuego
-            _videogameService.UpdateVideogame(videogameToUpdate, newGenre, newDescription, newDeveloper, newPlatform, newValoration);
-            Console.WriteLine("El videojuego se ha actualizado correctamente.");
+       
+
+        Console.Write("DNI: ");
+        string dni = _userService.InputEmpty();
+
+         Console.Write("Fecha de nacimiento (yyyy-mm-dd): ");
+        DateTime birthday = CheckDate();
+
+        
+        if (_userService.CheckRepeatUser(dni, email))
+        {
+            Console.WriteLine("Ya existe una cuenta asociada a uno de estos datos, pruebe otra vez.");
+            Registration();
         }
         else
         {
-            Console.WriteLine("No se encontró ningún videojuego con ese nombre.");
+            if (email.Contains("@"))
+            {
+                _userService.RegisterUser(name,lastname , email, password,  dni, birthday);
+                Console.WriteLine("¡Registro completado!");
+                GoToPublicMenu(email);
+            }
+            else
+            {
+                Console.WriteLine("El correo debe de contener @.");
+                Registration();
+            }
         }
     }
-    catch (Exception e)
+
+    private DateTime CheckDate()
+{
+    DateTime birthday;
+    string input;
+    
+    do
     {
-        Console.WriteLine($"Error al actualizar el videojuego: {e.Message}");
-    }
+        input = Console.ReadLine();
+        
+        if (DateTime.TryParse(input, out birthday))
+        {
+            return birthday;
+        } 
+        else 
+        {
+            Console.WriteLine("La fecha introducida es incorrecta. Inténtelo de nuevo.");
+        }
+
+    } while (true);
 }
 
+
+    private void GoToPublicMenu(string email)
+    {
+        publicMenu publicUserMenu = new(_userService, _videogameService);
+        publicUserMenu.MainPublicMenu(email);
     }
 
+     private void Login() {
+        Console.Write("Email: ");
+        string email = _userService.InputEmpty();
+        Console.Write("Contraseña: ");
+        string password = _userService.InputEmpty();
 
+        if (_userService.loginCheck(email, password))
+        {
+            GoToPublicMenu(email);
+        } 
+       
+        else
+        {
+            Console.WriteLine("El correo o la contraseña introducida es incorrecta.");
+            Registration();
+        }
+    }
+
+    private void goToAdminMode(){
+         Console.WriteLine("Has iniciado sesión como Admin");
+            AdminMenu adminMenu = new(_userService, _videogameService);
+            adminMenu.MainAdminMenu();
+    }
+    }
+
+    
 
 
     }
