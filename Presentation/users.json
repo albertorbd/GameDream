@@ -1,17 +1,5 @@
 [
   {
-    "Id": 0,
-    "Name": "Alberto",
-    "Lastname": "Riveiro",
-    "Email": "albertoriveiro@hotmail.es",
-    "Password": "1234",
-    "DNI": "23456",
-    "BirthDate": "1996-10-02T00:00:00",
-    "Money": 0,
-    "Operations": [],
-    "Videogames": {}
-  },
-  {
     "Id": 1,
     "Name": "Carmen",
     "Lastname": "Del Bano",
@@ -21,6 +9,49 @@
     "BirthDate": "1970-08-03T00:00:00",
     "Money": 0,
     "Operations": [],
+    "Videogames": {}
+  },
+  {
+    "Id": 2,
+    "Name": "Jesus ",
+    "Lastname": "Lopez",
+    "Email": "jesusito@hotmail.es",
+    "Password": "12345",
+    "DNI": "345678",
+    "BirthDate": "1990-12-20T00:00:00",
+    "Money": 0,
+    "Operations": [],
+    "Videogames": {}
+  },
+  {
+    "Id": 3,
+    "Name": "Alberto",
+    "Lastname": "Riveiro del Bano",
+    "Email": "albertoriveiro@hotmail.es",
+    "Password": "12345",
+    "DNI": "2532135",
+    "BirthDate": "1996-10-02T00:00:00",
+    "Money": 70,
+    "Operations": [
+      {
+        "Id": 1,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-05-03T20:44:36.6097804+02:00",
+        "Quantity": 1,
+        "Amount": 100,
+        "Method": "Tarjeta de cr\u00E9dito"
+      },
+      {
+        "Id": 2,
+        "Videogame": null,
+        "Concept": "Retirada",
+        "Date": "2024-05-03T20:44:52.5326739+02:00",
+        "Quantity": 1,
+        "Amount": 30,
+        "Method": "PayPal"
+      }
+    ],
     "Videogames": {}
   }
 ]

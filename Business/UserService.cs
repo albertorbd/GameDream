@@ -115,6 +115,78 @@ public void DeleteUser(string userEmail){
         }
     }  
 
+
+    public void Deposit(User user, string concept, string toDeposit, string method){
+        try{
+
+            if(double.TryParse(toDeposit, out double amount)){
+            IdTransationAument(user);
+
+            user.Money+=amount;
+            Operation operation=new Operation(concept,amount,method);
+            user.Operations.Add(operation);
+            _repository.UpdateUser(user);
+            _repository.SaveChanges();
+            Console.WriteLine($"Depósito de {operation.Amount}€ exitoso!!");
+        }else{
+            Console.WriteLine("Introduce un número por favor");
+        };
+        }
+         catch (Exception e)
+        {
+            _repository.LogError("Error trying to deposit money", e);
+            throw new Exception("An error has ocurred tryng to deposit money", e);
+        }
+    }
+
+    public void Withdrawal(User user, string concept, string toWithdraw, string method){
+        try{
+
+            if(double.TryParse(toWithdraw, out double amount)){
+
+                if (user.Money < amount) 
+                {
+                    Console.WriteLine("No tienes suficiente dinero ");
+                    return;
+                }
+            IdTransationAument(user);
+             Operation operation=new Operation(concept,amount,method);
+            user.Operations.Add(operation);
+            user.Money-=operation.Amount;
+            _repository.UpdateUser(user);
+            _repository.SaveChanges();
+            Console.WriteLine($"retirada de {operation.Amount}€ exitoso!!");
+        }else{
+            Console.WriteLine("Introduce un número por favor");
+        };
+        }
+         catch (Exception e)
+        {
+            _repository.LogError("Error trying to withdraw money", e);
+            throw new Exception("An error has ocurred tryng to withdraw money", e);
+        }
+    }
+
+
+    private void IdTransationAument(User user)
+    {
+        try
+        {
+                if (user.Operations.Count == 0)
+                {
+                    Operation.IdOperationSeed = 1;
+                }
+                else
+                {
+                    Operation.IdOperationSeed = user.Operations.Count + 1;
+                }
+        }
+        catch (Exception e)
+        {
+            _repository.LogError("Error al asignar el ID", e);
+            throw new Exception("Ha ocurrido un error al asignar el ID", e);
+        }
+    }
      public string InputEmpty()
     {
         try

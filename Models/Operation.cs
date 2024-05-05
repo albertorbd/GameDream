@@ -7,33 +7,31 @@ public class Operation
     public DateTime Date { get; set; }
     public double Quantity { get; set; }
     public double Amount { get; set; }
-    public double Price { get; set; }
     public string? Method { get; set; }
 
-    public static int IdTransactionSeed;
+    public static int IdOperationSeed;
 
     public Operation() {}
 
 
      public Operation (string concept, double amount, string method)
     {
-        Id = IdTransactionSeed++;
+        Id = IdOperationSeed++;
         Videogame = null;
         Concept = concept;
+        Quantity=1;
         Date = DateTime.Now;
         Amount = amount;
         Method = method;
     }
 
-    public Operation (Videogame videogame, string concept, double price, double quantity, double amount, string method)
+    public Operation (Videogame videogame, string concept,double price, string method)
     {
-        Id = IdTransactionSeed++;
+        Id = IdOperationSeed++;
         Videogame = videogame;
         Concept = concept;
         Date = DateTime.Now;
-        Price = price;
-        Quantity = quantity; 
-        Amount=amount;
+        Quantity = 1; 
         Method = method;
     }
 

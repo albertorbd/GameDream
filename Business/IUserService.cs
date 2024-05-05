@@ -10,6 +10,9 @@ bool CheckRepeatUser(string email, string dni);
 User GetUser(string email);
 void DeleteUser(string email);
 void UpdateUser(string email, string newEmail=null, string newPassword= null);
+void Deposit(User user, string concept, string amount, string method);
+void Withdrawal(User user, string concept, string amount, string method);
 string InputEmpty();
 bool loginCheck(string email, string password);
+
 }

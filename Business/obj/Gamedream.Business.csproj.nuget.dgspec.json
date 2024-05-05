@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj": {
-                "projectPath": "c:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj"
+              "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj": {
+                "projectPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj"
               },
               "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj": {
                 "projectPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj"
@@ -64,14 +64,14 @@
         }
       }
     },
-    "c:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj": {
+    "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj",
+        "projectUniqueName": "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj",
         "projectName": "Gamedream.Data",
-        "projectPath": "c:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj",
+        "projectPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj",
         "packagesPath": "C:\\Users\\carme\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\carme\\DOTNET\\Gamedream\\Data\\obj\\",
+        "outputPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carme\\AppData\\Roaming\\NuGet\\NuGet.Config"

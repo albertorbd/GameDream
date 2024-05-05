@@ -70,8 +70,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj": {
-              "projectPath": "c:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj"
+            "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj": {
+              "projectPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj"
             },
             "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj": {
               "projectPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj"
