@@ -25,14 +25,15 @@ public class Operation
         Method = method;
     }
 
-    public Operation (Videogame videogame, string concept,double price, string method)
+    public Operation (Videogame videogame, string concept,double price)
     {
         Id = IdOperationSeed++;
         Videogame = videogame;
         Concept = concept;
         Date = DateTime.Now;
-        Quantity = 1; 
-        Method = method;
+        Method= null;
+         Quantity= 1;
+        
     }
 
 }

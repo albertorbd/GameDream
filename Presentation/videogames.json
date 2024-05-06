@@ -20,5 +20,27 @@
     "Developer": "Atlus",
     "Platform": "XBOX Y PC",
     "Valoration": 10
+  },
+  {
+    "Id": 2,
+    "Name": "Final Fantasy XV",
+    "Genre": "Aventuras y Rol",
+    "Description": "Subir niveles y matar monstruos",
+    "RegisterDate": "2024-05-05T23:54:31.3882992+02:00",
+    "Price": 50,
+    "Developer": "Square Enix",
+    "Platform": "PS5 ",
+    "Valoration": 9
+  },
+  {
+    "Id": 3,
+    "Name": "Manor lords",
+    "Genre": "Estrategia",
+    "Description": "Construye tu imperio",
+    "RegisterDate": "2024-05-06T00:08:02.8823618+02:00",
+    "Price": 40,
+    "Developer": "Three Kingdom",
+    "Platform": "PC",
+    "Valoration": 9
   }
 ]

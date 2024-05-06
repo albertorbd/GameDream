@@ -167,7 +167,35 @@ public void DeleteUser(string userEmail){
         }
     }
 
+    public void BuyVideogame(User user, Videogame videogame,string concept){
+    try{
+       if (user.Money>=videogame.Price){
+    IdTransationAument(user);
+    if(videogame.Price.HasValue){  
+     user.Money-=videogame.Price.Value;
+}
+    if (!user.Videogames.ContainsKey(videogame.Name))
+        {
+            user.Videogames.Add(videogame.Name, videogame.Price.Value);
+        }else
+        {
+            throw new InvalidOperationException("Ya posees este videojuego.");
+        }
+        Operation operation = new Operation(videogame, $"Comprar {videogame.Name}", videogame.Price.Value);
+        user.Operations.Add(operation);
+        _repository.UpdateUser(user);
+        _repository.SaveChanges();
 
+       }else
+    {
+        throw new InvalidOperationException("No tienes suficiente saldo para comprar este videojuego.");
+    }
+    }catch(Exception e)
+    {
+        _repository.LogError("Error buying the videogame", e);
+        throw new Exception("An error has ocurred buying the videogame");
+    }
+    }
     private void IdTransationAument(User user)
     {
         try

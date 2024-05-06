@@ -12,6 +12,7 @@ void DeleteUser(string email);
 void UpdateUser(string email, string newEmail=null, string newPassword= null);
 void Deposit(User user, string concept, string amount, string method);
 void Withdrawal(User user, string concept, string amount, string method);
+void BuyVideogame(User user, Videogame videogame, string concept);
 string InputEmpty();
 bool loginCheck(string email, string password);
 

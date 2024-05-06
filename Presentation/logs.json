@@ -1,0 +1,4 @@
+05/05/2024 23:52:38 ERROR Error buying the videogame
+System.InvalidOperationException: Ya posees este videojuego.
+   at Gamedream.Business.UserService.BuyVideogame(User user, Videogame videogame, String concept) in C:\Users\carme\DOTNET\Gamedream\Business\UserService.cs:line 182
+

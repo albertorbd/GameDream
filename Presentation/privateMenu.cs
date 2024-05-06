@@ -32,7 +32,9 @@ public class privateMenu
         Console.WriteLine("1. Modificar correo | 2. Modificar contraseña");
         Console.WriteLine("3. Depositar dinero");
         Console.WriteLine("4. Retirar dinero");
-         Console.WriteLine("5. Borrar cuenta");
+        Console.WriteLine("5. Comprar videojuego");
+        Console.WriteLine("6. Borrar cuenta");
+
         SelectPrivateUserMenuOption(Console.ReadLine());
 
         
@@ -61,8 +63,11 @@ public class privateMenu
         case "4":
             MakeWithdrawal();
         break;
+          case "5":
+          BuyVideogame();
+        break;
 
-        case "5":
+        case "6":
         _userService.DeleteUser(currentUser.Email);
         Console.WriteLine("Tu cuenta ha sido eliminada correctamente");
         menu.Registration();
@@ -156,4 +161,38 @@ public class privateMenu
    Console.WriteLine("Contraseña actualizada");
    }
 
+    private void BuyVideogame(){
+     _videogameService.PrintAllVideogames();
+    Console.Write("Nombre del videojuego que quieres comprar: ");
+    string videoGameName = Console.ReadLine();
+    if(_videogameService.CheckVideogame(videoGameName)){
+     Videogame videoGame = _videogameService.GetVideogame(videoGameName);
+    Console.WriteLine($"Precio del videojuego {videoGame.Name}: {videoGame.Price}€");
+    Console.Write("¿Deseas comprar este videojuego? (S/N): ");
+     string choice = Console.ReadLine().ToUpper();
+
+        if (choice == "S")
+        {
+            try
+            {
+                _userService.BuyVideogame(currentUser, videoGame, $"Compra del videojuego {videoGame.Name}");
+                Console.WriteLine($"Has comprado el videojuego {videoGame.Name}.");
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Operación cancelada.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("No se ha encontrado ningún videojuego por ese nombre.");
+    }
+    
+    
+    }
     }
