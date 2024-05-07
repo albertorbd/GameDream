@@ -5,7 +5,7 @@ namespace Gamedream.Data;
 public class VideogameRepository : IVideogameRepository
 {
 private Dictionary<string, Videogame> _videogame = new Dictionary<string, Videogame>();
-    private readonly string _filePath = "videogames.json";
+    private readonly string _filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Data", "videogames.json");
         private readonly string _logsfilePath = "logs.json";
          
     public VideogameRepository()

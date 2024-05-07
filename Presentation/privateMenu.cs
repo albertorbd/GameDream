@@ -20,20 +20,22 @@ public class privateMenu
         currentUser = _userService.GetUser(userEmail);
 
         Console.WriteLine("\n ----------Gamedream------------------\n");
-        Console.WriteLine($" Efectivo: {currentUser.Money} €\n");
-        Console.WriteLine($"Nombre: {currentUser.Name}\n");
-        Console.WriteLine($"Apellidos: {currentUser.Lastname}\n");
-        Console.WriteLine($"Correo: {currentUser.Email}\n");
-        Console.WriteLine($"Contraseña: {currentUser.Password}\n");
-        Console.WriteLine($"Nombre: {currentUser.Name}\n");
-        Console.WriteLine($"Fecha de nacimiento: {currentUser.BirthDate}\n");
-        Console.WriteLine($"DNI: {currentUser.DNI}\n");
+        Console.WriteLine($" Efectivo: {currentUser.Money} €");
+        Console.WriteLine($"Nombre: {currentUser.Name}");
+        Console.WriteLine($"Apellidos: {currentUser.Lastname}");
+        Console.WriteLine($"Correo: {currentUser.Email}");
+        Console.WriteLine($"Fecha de nacimiento: {currentUser.BirthDate}");
+        Console.WriteLine($"DNI: {currentUser.DNI}");
 
         Console.WriteLine("1. Modificar correo | 2. Modificar contraseña");
         Console.WriteLine("3. Depositar dinero");
         Console.WriteLine("4. Retirar dinero");
         Console.WriteLine("5. Comprar videojuego");
         Console.WriteLine("6. Borrar cuenta");
+        Console.WriteLine("7. Lista de Videojuegos");
+        Console.WriteLine("8. Lista de Operaciones");
+        Console.WriteLine("9. Cerrar sesión");
+
 
         SelectPrivateUserMenuOption(Console.ReadLine());
 
@@ -51,20 +53,25 @@ public class privateMenu
             Console.Write("Nuevo email: ");
             string email = _userService.InputEmpty();
             UpdateEmail(email);
+            MainPrivateMenu(currentUser.Email);
         break;
         case "2":
             Console.Write("Nueva contraseña: ");
             string password = _userService.InputEmpty();
             UpdatePassword(password);
+            MainPrivateMenu(currentUser.Email);
         break;
         case "3":
             MakeDeposit();
+            MainPrivateMenu(currentUser.Email);
         break;
         case "4":
             MakeWithdrawal();
+            MainPrivateMenu(currentUser.Email);
         break;
           case "5":
           BuyVideogame();
+          MainPrivateMenu(currentUser.Email);
         break;
 
         case "6":
@@ -73,6 +80,23 @@ public class privateMenu
         menu.Registration();
             
         break;
+
+        case "7":
+        _userService.PrintVideogameBought(currentUser);
+        MainPrivateMenu(currentUser.Email);
+
+        break;
+
+        case "8":
+        _userService.PrintOperations(currentUser);
+        MainPrivateMenu(currentUser.Email);
+            
+        break;
+        case "9":
+       menu.Registration();
+            
+        break;
+       
        
         default:
             Console.WriteLine("Introduce una opción válida");

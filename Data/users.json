@@ -3,7 +3,7 @@
     "Id": 1,
     "Name": "Carmen",
     "Lastname": "Del Bano",
-    "Email": "carmen@hotmail.es",
+    "Email": "carmendbd@hotmail.es",
     "Password": "4321",
     "DNI": "2545432",
     "BirthDate": "1970-08-03T00:00:00",
@@ -143,5 +143,29 @@
       "Dragons dogma 2": 70,
       "Final Fantasy XV": 50
     }
+  },
+  {
+    "Id": 4,
+    "Name": "carlos",
+    "Lastname": "diaz",
+    "Email": "carlosd@hotmail.es",
+    "Password": "123455",
+    "DNI": "234567",
+    "BirthDate": "1980-02-10T00:00:00",
+    "Money": 0,
+    "Operations": [],
+    "Videogames": {}
+  },
+  {
+    "Id": 5,
+    "Name": "ramon",
+    "Lastname": "riveiro",
+    "Email": "ramon@hotmail.es",
+    "Password": "12345",
+    "DNI": "23456789",
+    "BirthDate": "1960-10-06T00:00:00",
+    "Money": 0,
+    "Operations": [],
+    "Videogames": {}
   }
 ]

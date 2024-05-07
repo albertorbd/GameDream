@@ -6,7 +6,7 @@ public class UserRepository : IUserRepository
 {
 
  private Dictionary<string, User> _users = new Dictionary<string, User>();
-    private readonly string _filePath = "users.json";
+    private readonly string _filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Data", "users.json");
     private readonly string _logsFilePath = "logs.json";
 
     public UserRepository()
@@ -60,12 +60,6 @@ public class UserRepository : IUserRepository
         }
     }
 
-
-
-
-
-
-
     public void LoadUsers()
     {
      if (File.Exists(_filePath))
@@ -86,6 +80,7 @@ public class UserRepository : IUserRepository
             catch (Exception e)
             {
                 LogError("Error searching users archive", e);
+                 throw new Exception("Error searching users archive", e);
             }
         }
         

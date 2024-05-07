@@ -133,6 +133,7 @@ public void PrintAllVideogames(){
 
  public void SearchVideogameByName()
 {
+    try{
     string searchQuery;
     do
     {
@@ -162,7 +163,14 @@ public void PrintAllVideogames(){
             Console.WriteLine();
         }
     } while (searchQuery.ToLower() != "s");
-}
+    } catch (Exception e)
+        {
+            _repository.LogError("Error searching videogame", e);
+            throw new Exception("An eror has ocurred searching the videogame", e);
+        }
+
+    }
+
 
 
 }

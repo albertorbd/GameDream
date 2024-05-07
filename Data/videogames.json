@@ -13,13 +13,13 @@
   {
     "Id": 1,
     "Name": "Persona 5",
-    "Genre": "Rol ",
-    "Description": "Tienes la habilidad de invocar esbirros que te ayudar\u251C\u00EDn a pelear ",
+    "Genre": "Persona 4",
+    "Description": "Juego de Rol estilo anime",
     "RegisterDate": "2024-05-03T13:28:28.6724282+02:00",
     "Price": 50,
-    "Developer": "Atlus",
-    "Platform": "XBOX Y PC",
-    "Valoration": 10
+    "Developer": "Balve",
+    "Platform": "PS5",
+    "Valoration": 19
   },
   {
     "Id": 2,
@@ -42,5 +42,16 @@
     "Developer": "Three Kingdom",
     "Platform": "PC",
     "Valoration": 9
+  },
+  {
+    "Id": 4,
+    "Name": "The witcher 3",
+    "Genre": "Acci\u251C\u2502n",
+    "Description": "Eres geralt de rivia, un brujo que acepta contratos de matar monstruos a cambio de dinero",
+    "RegisterDate": "2024-05-07T15:45:00.8691508+02:00",
+    "Price": 20,
+    "Developer": "Project Red",
+    "Platform": "ps5",
+    "Valoration": 10
   }
 ]

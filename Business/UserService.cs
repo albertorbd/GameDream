@@ -3,6 +3,7 @@ using Microsoft.VisualBasic;
 
 using Gamedream.Data;
 using Gamedream.Models;
+using System.Buffers;
 
 namespace Gamedream.Business;
 public class UserService : IUserService
@@ -94,20 +95,31 @@ public void DeleteUser(string userEmail){
 
 
   public void UpdateUser(string userEmail, string  newEmail= null, string newPassword=null){
+    
         try{
         User userUpdated= _repository.GetUser(userEmail);
+
+        if(!string.IsNullOrEmpty(newEmail) && IsEmailTaken(newEmail)){
+            Console.WriteLine("El correo está siendo utilizado por otro usuario");
+            return;
+        }
          if (!string.IsNullOrEmpty(newEmail))
             {
                 userUpdated.Email = newEmail;
+                
             }
 
             if (!string.IsNullOrEmpty(newPassword))
             {
                 userUpdated.Password = newPassword;
+                
             }
-
+        
+        
         _repository.UpdateUser(userUpdated);
         _repository.SaveChanges();
+        
+
         }catch(Exception e){
             _repository.LogError("Error updating user",e);
             throw new Exception("An error has ocurred updating user");
@@ -196,6 +208,70 @@ public void DeleteUser(string userEmail){
         throw new Exception("An error has ocurred buying the videogame");
     }
     }
+
+    public void PrintVideogameBought(User user)
+    {
+        try
+        {  
+            
+            Console.WriteLine("Lista de videojuegos en posesión:\n");
+
+            foreach (var videogame in user.Videogames)
+            {
+                
+                Console.WriteLine($"{videogame.Key}: {videogame.Value}\n");
+            }
+        }
+        catch (Exception e)
+        {
+            _repository.LogError("Error trying to show your videogames", e);
+            throw new Exception("An error has ocurred trying to show your videogames", e);
+        }
+    }
+     public void PrintOperations(User user)
+    {
+        try
+        {
+            List<Operation> allOperations = user.Operations;
+            Console.WriteLine("Lista de Operaciones:\n");
+            foreach (var operation in allOperations)
+            {
+                if (operation.Videogame == null)
+                {
+                    Console.WriteLine($"ID: {operation.Id}, Concepto: {operation.Concept}, Fecha: {operation.Date}, Cantidad: {operation.Amount}, Método de pago: {operation.Method}\n");
+                }
+                else
+                {
+                    Console.WriteLine($"ID: {operation.Id}, Videojuego: {operation.Videogame.Name}, Precio: {operation.Videogame.Price}, Concepto: {operation.Concept}, Fecha: {operation.Date}\n");
+
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            _repository.LogError("Error al obtener las transacciones", e);
+            throw new Exception("Ha ocurrido un error al obtener las transacciones", e);
+        }
+    }
+
+
+    public bool IsEmailTaken(string email){
+        try{
+            var users= _repository.GetAllUsers().Values;
+            foreach(var user in users){
+                if(user.Email==email){
+                    return true;
+                }
+            }
+            return false;
+        }catch (Exception e)
+        {
+            _repository.LogError("Error checking email", e);
+            throw new Exception("An error has ocurred checking if email is in use", e);
+        }
+
+        }
+    
     private void IdTransationAument(User user)
     {
         try

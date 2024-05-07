@@ -2,9 +2,23 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Models\Gamedream.Models.csproj" />
-    <ProjectReference Include="..\Business\Gamedream.Business.csproj" />
-    
+    <ProjectReference Include="..\Business\Gamedream.Business.csproj" />   
   </ItemGroup>
+  
+ <ItemGroup> 
+<None Update= "../Data/videogames.json">
+  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  </ItemGroup>
+
+  <ItemGroup>
+
+  <None Update= "../Data/users.json">
+  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  </ItemGroup>
+  
+
 
   
 
