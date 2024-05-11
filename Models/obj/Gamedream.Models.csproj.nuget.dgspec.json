@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj": {}
+    "C:\\Users\\Alberto\\DOTNET\\GameDream\\Models\\Gamedream.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj": {
+    "C:\\Users\\Alberto\\DOTNET\\GameDream\\Models\\Gamedream.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Alberto\\DOTNET\\GameDream\\Models\\Gamedream.Models.csproj",
         "projectName": "Gamedream.Models",
-        "projectPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj",
-        "packagesPath": "C:\\Users\\carme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\obj\\",
+        "projectPath": "C:\\Users\\Alberto\\DOTNET\\GameDream\\Models\\Gamedream.Models.csproj",
+        "packagesPath": "C:\\Users\\Alberto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alberto\\DOTNET\\GameDream\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carme\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -43,8 +43,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -53,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.421\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.320\\RuntimeIdentifierGraph.json"
         }
       }
     }

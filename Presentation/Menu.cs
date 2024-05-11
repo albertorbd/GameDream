@@ -46,7 +46,7 @@ namespace Gamedream.Presentation
         break;
 
         case "4":
-        Console.WriteLine("Vuelve cuando quieras")  ;
+        Console.WriteLine("Vuelve cuando quieras");
         break;
         default:
             Console.WriteLine("Introduce una opción válida");

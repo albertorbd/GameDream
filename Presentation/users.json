@@ -167,5 +167,17 @@
     "Money": 0,
     "Operations": [],
     "Videogames": {}
+  },
+  {
+    "Id": 6,
+    "Name": "mario ",
+    "Lastname": "bes",
+    "Email": "mariobes@hotmail.es",
+    "Password": "12345",
+    "DNI": "21312312123",
+    "BirthDate": "1997-02-10T00:00:00",
+    "Money": 0,
+    "Operations": [],
+    "Videogames": {}
   }
 ]

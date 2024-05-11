@@ -1,8 +1,11 @@
+
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <ProjectReference Include="..\Models\Gamedream.Models.csproj" />
   </ItemGroup>
+
+ 
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>

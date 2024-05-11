@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\carme\\.nuget\\packages\\": {}
+    "C:\\Users\\Alberto\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Alberto\\DOTNET\\GameDream\\Data\\Gamedream.Data.csproj",
       "projectName": "Gamedream.Data",
-      "projectPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\Gamedream.Data.csproj",
-      "packagesPath": "C:\\Users\\carme\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Data\\obj\\",
+      "projectPath": "C:\\Users\\Alberto\\DOTNET\\GameDream\\Data\\Gamedream.Data.csproj",
+      "packagesPath": "C:\\Users\\Alberto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alberto\\DOTNET\\GameDream\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\carme\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -51,8 +51,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj": {
-              "projectPath": "C:\\Users\\carme\\DOTNET\\Gamedream\\Models\\Gamedream.Models.csproj"
+            "C:\\Users\\Alberto\\DOTNET\\GameDream\\Models\\Gamedream.Models.csproj": {
+              "projectPath": "C:\\Users\\Alberto\\DOTNET\\GameDream\\Models\\Gamedream.Models.csproj"
             }
           }
         }
@@ -72,8 +72,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -82,7 +81,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.421\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.320\\RuntimeIdentifierGraph.json"
       }
     }
   }
