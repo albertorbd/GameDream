@@ -1,16 +1,5 @@
 [
   {
-    "Id": 0,
-    "Name": "Dragons dogma 2",
-    "Genre": "Aventura y Rol",
-    "Description": "Eres un Arisen que tiene que recuperar su coraz\u251C\u2502n",
-    "RegisterDate": "2024-05-03T13:18:45.2093585+02:00",
-    "Price": 70,
-    "Developer": "Capcom",
-    "Platform": "PC PS5 Y XBOX",
-    "Valoration": 10
-  },
-  {
     "Id": 1,
     "Name": "Persona 5",
     "Genre": "Persona 4",
@@ -53,5 +42,16 @@
     "Developer": "Project Red",
     "Platform": "ps5",
     "Valoration": 10
+  },
+  {
+    "Id": 5,
+    "Name": "Max Payne 3",
+    "Genre": "Acci\u251C\u2502n",
+    "Description": "Historia de redenci\u251C\u2502n donde eres un expolic\u251C\u00A1a que tienes que recuperar tu vida",
+    "RegisterDate": "2024-05-12T01:20:22.0571076+02:00",
+    "Price": 40,
+    "Developer": "Balve",
+    "Platform": "PS4, PC",
+    "Valoration": 9
   }
 ]

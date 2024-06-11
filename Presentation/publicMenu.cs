@@ -45,6 +45,7 @@ public class publicMenu
         break;
         case "3":
             Console.WriteLine("Se ha cerrado la sesión");
+            
             menu.Registration();
         break;
         default:

@@ -93,7 +93,7 @@ public class privateMenu
             
         break;
         case "9":
-       menu.Registration();
+        menu.Registration();
             
         break;
        

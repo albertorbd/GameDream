@@ -7,9 +7,49 @@
     "Password": "4321",
     "DNI": "2545432",
     "BirthDate": "1970-08-03T00:00:00",
-    "Money": 0,
-    "Operations": [],
-    "Videogames": {}
+    "Money": 130,
+    "Operations": [
+      {
+        "Id": 1,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T02:48:56.5527347+02:00",
+        "Quantity": 1,
+        "Amount": 50,
+        "Method": "PayPal"
+      },
+      {
+        "Id": 2,
+        "Videogame": {
+          "Id": 4,
+          "Name": "The witcher 3",
+          "Genre": "Acci\u251C\u2502n",
+          "Description": "Eres geralt de rivia, un brujo que acepta contratos de matar monstruos a cambio de dinero",
+          "RegisterDate": "2024-05-07T15:45:00.8691508+02:00",
+          "Price": 20,
+          "Developer": "Project Red",
+          "Platform": "ps5",
+          "Valoration": 10
+        },
+        "Concept": "Comprar The witcher 3",
+        "Date": "2024-06-11T02:49:39.2398763+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
+      },
+      {
+        "Id": 3,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T02:53:34.7374986+02:00",
+        "Quantity": 1,
+        "Amount": 100,
+        "Method": "Tarjeta de cr\u00E9dito"
+      }
+    ],
+    "Videogames": {
+      "The witcher 3": 20
+    }
   },
   {
     "Id": 2,
@@ -62,7 +102,7 @@
     "Password": "12345",
     "DNI": "2532135",
     "BirthDate": "1996-10-02T00:00:00",
-    "Money": 50,
+    "Money": 40,
     "Operations": [
       {
         "Id": 1,
@@ -136,12 +176,50 @@
         "Quantity": 0,
         "Amount": 0,
         "Method": null
+      },
+      {
+        "Id": 8,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T03:01:25.2415654+02:00",
+        "Quantity": 1,
+        "Amount": 50,
+        "Method": "PayPal"
+      },
+      {
+        "Id": 9,
+        "Videogame": null,
+        "Concept": "Retirada",
+        "Date": "2024-06-11T03:01:34.2582093+02:00",
+        "Quantity": 1,
+        "Amount": 20,
+        "Method": "PayPal"
+      },
+      {
+        "Id": 10,
+        "Videogame": {
+          "Id": 5,
+          "Name": "Max Payne 3",
+          "Genre": "Acci\u251C\u2502n",
+          "Description": "Historia de redenci\u251C\u2502n donde eres un expolic\u251C\u00A1a que tienes que recuperar tu vida",
+          "RegisterDate": "2024-05-12T01:20:22.0571076+02:00",
+          "Price": 40,
+          "Developer": "Balve",
+          "Platform": "PS4, PC",
+          "Valoration": 9
+        },
+        "Concept": "Comprar Max Payne 3",
+        "Date": "2024-06-11T03:03:52.4447751+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
       }
     ],
     "Videogames": {
       "Persona 5": 50,
       "Dragons dogma 2": 70,
-      "Final Fantasy XV": 50
+      "Final Fantasy XV": 50,
+      "Max Payne 3": 40
     }
   },
   {
@@ -179,5 +257,77 @@
     "Money": 0,
     "Operations": [],
     "Videogames": {}
+  },
+  {
+    "Id": 7,
+    "Name": "Pruebas",
+    "Lastname": "prueba",
+    "Email": "prueba1@hotmail.es",
+    "Password": "123456",
+    "DNI": "23213123",
+    "BirthDate": "1996-10-01T00:00:00",
+    "Money": 80,
+    "Operations": [
+      {
+        "Id": 1,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T03:05:32.8227669+02:00",
+        "Quantity": 1,
+        "Amount": 70,
+        "Method": "Visa"
+      },
+      {
+        "Id": 2,
+        "Videogame": {
+          "Id": 3,
+          "Name": "Manor lords",
+          "Genre": "Estrategia",
+          "Description": "Construye tu imperio",
+          "RegisterDate": "2024-05-06T00:08:02.8823618+02:00",
+          "Price": 40,
+          "Developer": "Three Kingdom",
+          "Platform": "PC",
+          "Valoration": 9
+        },
+        "Concept": "Comprar Manor lords",
+        "Date": "2024-06-11T03:05:54.4019931+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
+      },
+      {
+        "Id": 3,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T03:13:47.9772512+02:00",
+        "Quantity": 1,
+        "Amount": 70,
+        "Method": "Visa"
+      },
+      {
+        "Id": 4,
+        "Videogame": {
+          "Id": 4,
+          "Name": "The witcher 3",
+          "Genre": "Acci\u251C\u2502n",
+          "Description": "Eres geralt de rivia, un brujo que acepta contratos de matar monstruos a cambio de dinero",
+          "RegisterDate": "2024-05-07T15:45:00.8691508+02:00",
+          "Price": 20,
+          "Developer": "Project Red",
+          "Platform": "ps5",
+          "Valoration": 10
+        },
+        "Concept": "Comprar The witcher 3",
+        "Date": "2024-06-11T03:14:07.2934873+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
+      }
+    ],
+    "Videogames": {
+      "Manor lords": 40,
+      "The witcher 3": 20
+    }
   }
 ]

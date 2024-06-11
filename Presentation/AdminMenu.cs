@@ -38,6 +38,7 @@ public class AdminMenu
         {
         case "1":
         CreateVideogame();
+        MainAdminMenu();
         break;
         case "2":
         ShowAllVideogames();
@@ -46,10 +47,12 @@ public class AdminMenu
         break;
         case "3":
         DeleteVideogame();
+        MainAdminMenu();
 
         break;
         case "4":
         UpdateVideogame();
+        MainAdminMenu();
         break;
 
         case "5":
@@ -123,7 +126,6 @@ public class AdminMenu
                 string name = _videogameService.InputEmpty();
 
                 _videogameService.DeleteVideogame(name);
-                Console.WriteLine("El videojuego se ha eliminado correctamente.");
             }
             catch (Exception e)
             {
