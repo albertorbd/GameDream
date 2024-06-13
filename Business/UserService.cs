@@ -1,9 +1,8 @@
-﻿using System.Security.Cryptography;
-using Microsoft.VisualBasic;
+﻿
 
 using Gamedream.Data;
 using Gamedream.Models;
-using System.Buffers;
+
 
 namespace Gamedream.Business;
 public class UserService : IUserService
@@ -179,36 +178,41 @@ public void DeleteUser(string userEmail){
         }
     }
 
-    public void BuyVideogame(User user, Videogame videogame,string concept){
-    try{
-       if (user.Money>=videogame.Price){
-    IdTransationAument(user);
-    if(videogame.Price.HasValue){  
-     user.Money-=videogame.Price.Value;
-}
-    if (!user.Videogames.ContainsKey(videogame.Name))
-        {
-            user.Videogames.Add(videogame.Name, videogame.Price.Value);
-        }else
-        {
-            throw new InvalidOperationException("Ya posees este videojuego.");
-        }
-        Operation operation = new Operation(videogame, $"Comprar {videogame.Name}", videogame.Price.Value);
-        user.Operations.Add(operation);
-        _repository.UpdateUser(user);
-        _repository.SaveChanges();
-
-       }else
+    public void BuyVideogame(User user, Videogame videogame, string concept)
+{
+    try
     {
-        throw new InvalidOperationException("No tienes suficiente saldo para comprar este videojuego.");
+        if (user.Money >= videogame.Price)
+        {
+            if (!user.Videogames.ContainsKey(videogame.Name))
+            {
+                user.Money -= videogame.Price.Value; // Solo se descuenta si el usuario no posee el videojuego
+                IdTransationAument(user);
+
+                user.Videogames.Add(videogame.Name, videogame.Price.Value);
+                Console.WriteLine($"Has comprado el videojuego {videogame.Name}.");
+
+                Operation operation = new Operation(videogame, $"Comprar {videogame.Name}", videogame.Price.Value);
+                user.Operations.Add(operation);
+                _repository.UpdateUser(user);
+                _repository.SaveChanges();
+            }
+            else
+            {
+                Console.WriteLine("Ya posees este videojuego.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("No tienes suficiente saldo para comprar este videojuego.");
+        }
     }
-    }catch(Exception e)
+    catch (Exception e)
     {
         _repository.LogError("Error buying the videogame", e);
-        throw new Exception("An error has ocurred buying the videogame");
+        throw new Exception("An error has occurred buying the videogame");
     }
-    }
-
+}
     public void PrintVideogameBought(User user)
     {
         try

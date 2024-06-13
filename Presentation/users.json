@@ -7,7 +7,7 @@
     "Password": "4321",
     "DNI": "2545432",
     "BirthDate": "1970-08-03T00:00:00",
-    "Money": 130,
+    "Money": 40,
     "Operations": [
       {
         "Id": 1,
@@ -45,10 +45,182 @@
         "Quantity": 1,
         "Amount": 100,
         "Method": "Tarjeta de cr\u00E9dito"
+      },
+      {
+        "Id": 4,
+        "Videogame": null,
+        "Concept": "Retirada",
+        "Date": "2024-06-11T04:21:30.7062823+02:00",
+        "Quantity": 1,
+        "Amount": 120,
+        "Method": "Visa"
+      },
+      {
+        "Id": 5,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T04:22:34.4344595+02:00",
+        "Quantity": 1,
+        "Amount": 30,
+        "Method": "Visa"
+      },
+      {
+        "Id": 6,
+        "Videogame": {
+          "Id": 3,
+          "Name": "Manor lords",
+          "Genre": "Estrategia",
+          "Description": "Construye tu imperio",
+          "RegisterDate": "2024-05-06T00:08:02.8823618+02:00",
+          "Price": 40,
+          "Developer": "Three Kingdom",
+          "Platform": "PC",
+          "Valoration": 9
+        },
+        "Concept": "Comprar Manor lords",
+        "Date": "2024-06-11T04:25:01.0533708+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
+      },
+      {
+        "Id": 7,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T04:31:52.6602047+02:00",
+        "Quantity": 1,
+        "Amount": 50,
+        "Method": "Tarjeta de cr\u00E9dito"
+      },
+      {
+        "Id": 8,
+        "Videogame": {
+          "Id": 2,
+          "Name": "Final Fantasy XV",
+          "Genre": "Aventuras y Rol",
+          "Description": "Subir niveles y matar monstruos",
+          "RegisterDate": "2024-05-05T23:54:31.3882992+02:00",
+          "Price": 50,
+          "Developer": "Square Enix",
+          "Platform": "PS5 ",
+          "Valoration": 9
+        },
+        "Concept": "Comprar Final Fantasy XV",
+        "Date": "2024-06-11T04:33:18.6887381+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
+      },
+      {
+        "Id": 9,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T04:40:26.0088005+02:00",
+        "Quantity": 1,
+        "Amount": 100,
+        "Method": "Visa"
+      },
+      {
+        "Id": 10,
+        "Videogame": {
+          "Id": 1,
+          "Name": "Persona 5",
+          "Genre": "Persona 4",
+          "Description": "Juego de Rol estilo anime",
+          "RegisterDate": "2024-05-03T13:28:28.6724282+02:00",
+          "Price": 50,
+          "Developer": "Balve",
+          "Platform": "PS5",
+          "Valoration": 19
+        },
+        "Concept": "Comprar Persona 5",
+        "Date": "2024-06-11T04:40:41.309231+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
+      },
+      {
+        "Id": 11,
+        "Videogame": {
+          "Id": 4,
+          "Name": "The witcher 3",
+          "Genre": "Acci\u251C\u2502n",
+          "Description": "Eres geralt de rivia, un brujo que acepta contratos de matar monstruos a cambio de dinero",
+          "RegisterDate": "2024-05-07T15:45:00.8691508+02:00",
+          "Price": 20,
+          "Developer": "Project Red",
+          "Platform": "ps5",
+          "Valoration": 10
+        },
+        "Concept": "Comprar The witcher 3",
+        "Date": "2024-06-11T04:41:00.8294941+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
+      },
+      {
+        "Id": 12,
+        "Videogame": {
+          "Id": 4,
+          "Name": "The witcher 3",
+          "Genre": "Acci\u251C\u2502n",
+          "Description": "Eres geralt de rivia, un brujo que acepta contratos de matar monstruos a cambio de dinero",
+          "RegisterDate": "2024-05-07T15:45:00.8691508+02:00",
+          "Price": 20,
+          "Developer": "Project Red",
+          "Platform": "ps5",
+          "Valoration": 10
+        },
+        "Concept": "Comprar The witcher 3",
+        "Date": "2024-06-11T04:43:01.1067532+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
+      },
+      {
+        "Id": 13,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T04:45:52.3606655+02:00",
+        "Quantity": 1,
+        "Amount": 20,
+        "Method": "Visa"
+      },
+      {
+        "Id": 14,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T04:46:39.9645362+02:00",
+        "Quantity": 1,
+        "Amount": 50,
+        "Method": "Visa"
+      },
+      {
+        "Id": 15,
+        "Videogame": {
+          "Id": 5,
+          "Name": "Max Payne 3",
+          "Genre": "Acci\u251C\u2502n",
+          "Description": "Historia de redenci\u251C\u2502n donde eres un expolic\u251C\u00A1a que tienes que recuperar tu vida",
+          "RegisterDate": "2024-05-12T01:20:22.0571076+02:00",
+          "Price": 40,
+          "Developer": "Balve",
+          "Platform": "PS4, PC",
+          "Valoration": 9
+        },
+        "Concept": "Comprar Max Payne 3",
+        "Date": "2024-06-11T04:46:48.4139663+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
       }
     ],
     "Videogames": {
-      "The witcher 3": 20
+      "The witcher 3": 20,
+      "Manor lords": 40,
+      "Final Fantasy XV": 50,
+      "Persona 5": 50,
+      "Max Payne 3": 40
     }
   },
   {
@@ -254,9 +426,40 @@
     "Password": "12345",
     "DNI": "21312312123",
     "BirthDate": "1997-02-10T00:00:00",
-    "Money": 0,
-    "Operations": [],
-    "Videogames": {}
+    "Money": 10,
+    "Operations": [
+      {
+        "Id": 1,
+        "Videogame": null,
+        "Concept": "Ingreso",
+        "Date": "2024-06-11T03:38:57.6843688+02:00",
+        "Quantity": 1,
+        "Amount": 50,
+        "Method": "Visa"
+      },
+      {
+        "Id": 2,
+        "Videogame": {
+          "Id": 5,
+          "Name": "Max Payne 3",
+          "Genre": "Acci\u251C\u2502n",
+          "Description": "Historia de redenci\u251C\u2502n donde eres un expolic\u251C\u00A1a que tienes que recuperar tu vida",
+          "RegisterDate": "2024-05-12T01:20:22.0571076+02:00",
+          "Price": 40,
+          "Developer": "Balve",
+          "Platform": "PS4, PC",
+          "Valoration": 9
+        },
+        "Concept": "Comprar Max Payne 3",
+        "Date": "2024-06-11T03:39:06.351038+02:00",
+        "Quantity": 1,
+        "Amount": 0,
+        "Method": null
+      }
+    ],
+    "Videogames": {
+      "Max Payne 3": 40
+    }
   },
   {
     "Id": 7,
@@ -329,5 +532,17 @@
       "Manor lords": 40,
       "The witcher 3": 20
     }
+  },
+  {
+    "Id": 9,
+    "Name": "Pepe",
+    "Lastname": "peperoni",
+    "Email": "pepe@gmail.com",
+    "Password": "pepe1234",
+    "DNI": "2324242424",
+    "BirthDate": "1990-10-02T00:00:00",
+    "Money": 0,
+    "Operations": [],
+    "Videogames": {}
   }
 ]

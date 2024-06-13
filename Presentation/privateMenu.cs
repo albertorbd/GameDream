@@ -197,16 +197,10 @@ public class privateMenu
 
         if (choice == "S")
         {
-            try
-            {
-                _userService.BuyVideogame(currentUser, videoGame, $"Compra del videojuego {videoGame.Name}");
-                Console.WriteLine($"Has comprado el videojuego {videoGame.Name}.");
-            }
-            catch (InvalidOperationException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+           _userService.BuyVideogame(currentUser, videoGame, $"Compra del videojuego {videoGame.Name}");
+           
         }
+           
         else
         {
             Console.WriteLine("Operación cancelada.");
